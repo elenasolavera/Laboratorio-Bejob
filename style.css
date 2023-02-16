@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url("https://fonts.cdnfonts.com/css/poppins");
+}
+
+/* Color definitions */
+*{
+    --main-background: #242933;
+    --box-background: #2f3644;
+    --border-color: #393f55;
+    --button-color: #6d66f7;
+    --title-color: #acbae1;
+    --text-color: #7b84a5;
+    --alert-text: #db5a5a;
+    --valid-color: #4dc863;
+}
+
+h1 {
+  color: var(--title-color);
+  font-family: "Poppins", sans-serif; 
+}
+body {
+  background-color: var(--main-background);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.caja {
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--box-background);
+  margin-top: 30px;
+  width: 25%;
+  padding: 20px 40px
+}
+.flexcol {
+  display: flex;
+  flex-direction: column;
+}
+.texto {
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  margin: 5px 0px
+}
+.enviar {
+  background-color: var(--button-color);
+  font-weight: bold;
+  color: white;
+  display: block;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px
+}
+.inputElement {
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.error-text{
+    color: var(--alert-text);
+    margin: 5px 0px;
+    height: 20px;
+    width: 100%
+}
+
+input.invalid{
+  border: 3px solid var(--alert-text);
+  background-image: url(.Images/error-icon.svg);
+  display: flex;
+  justify-content: end;
+  background-repeat: no-repeat;
+  background-position: 99% 50%;
+  background-size: 30px;
+}
+
+input.valid{
+  border: 3px solid var(--valid-color);
+  background-image: url(.Images/success-icon.svg);
+  display: flex;
+  justify-content: end;
+  background-repeat: no-repeat;
+  background-position: 99% 50%;
+  background-size: 30px;
+}

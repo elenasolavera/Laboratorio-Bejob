@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <script src="./index.js"></script>
+</head>
+<body onload="init()" onbeforeunload="persistData()">
+  <form class="flexcol">
+    <div class="caja flexcol">
+      <h1>Create Account</h1>
+      <!-- Nombre -->
+      <label for="nombre" class="texto">Nombre</label>
+      <input id="nombre_input" type="text" name="nombre" class="inputElement" />
+      <span id="nombre_message" class="error-text"></span>
+      <!-- Email -->
+      <label for="correo" class="texto">Email</label>
+      <input
+        id="email_input"
+        type="text"
+        name="correo"
+        value=""
+        class="inputElement"
+      />
+      <span id="email_message" class="error-text"></span>
+      <!-- Clave -->
+      <label for="clave" class="texto">Clave</label>
+      <input
+        id="clave_input"
+        type="password"
+        name="clave"
+        value=""
+        class="inputElement"
+      />
+      <span id="clave_message" class="error-text"></span>
+      <!-- Confrime su clave -->
+      <label for="clave2" class="texto">Confirme su clave</label>
+      <input
+        id="confirmclave_input"
+        type="password"
+        name="clave2"
+        value=""
+        class="inputElement"
+      />
+      <span id="confirmclave_message" class="error-text"></span>
+      <!-- Enviar -->
+      <button class="enviar" onclick="validation(event)">ENVIAR</button>
+    </div>
+  </form>
+</body>
